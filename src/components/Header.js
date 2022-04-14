@@ -9,7 +9,7 @@ const Header = () => {
         title='Srdjan'
         extra={[
           <Button key="6" danger type="text">
-            <Link data-cy='home' to="/">Home</Link>
+            <Link data-test='home' to="/">Home</Link>
           </Button>,
           <Button key="5">
             <Link to="/register">Register</Link>
@@ -18,13 +18,13 @@ const Header = () => {
             <Link to="/login">Login</Link>
           </Button>,
           <Button key="3">
-            <Link to="/articles">Articles</Link>
+            <Link data-test='articles' to="/articles">Articles</Link>
           </Button>,
           <Button key="2">
             <Link to="/user">Single user</Link>
           </Button>,
           <Button key="1" type="primary">
-            <Link data-cy='users' to="/users">Users</Link>
+            <Link data-test='users' to="/users">Users</Link>
           </Button>
         ]}
       ></PageHeader>

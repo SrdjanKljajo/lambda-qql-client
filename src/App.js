@@ -6,6 +6,11 @@ import { client } from './services/graphQL/client'
 import Home from './screens/Home'
 import NotFound from './screens/NotFound'
 import Header from './components/Header'
+import Users from './screens/Users'
+import User from './screens/User'
+import Articles from './screens/Articles'
+import Login from './screens/Login'
+import Register from './screens/Register'
 
 const App = () => {
   return (
@@ -15,6 +20,11 @@ const App = () => {
           <Header/>
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/register" element={<Register />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/users" element={<Users />} />
+            <Route exact path="/user" element={<User />} />
+            <Route exact path="/articles" element={<Articles />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
