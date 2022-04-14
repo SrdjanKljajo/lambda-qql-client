@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import 'antd/dist/antd.min.css'
+import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { ApolloProvider } from '@apollo/client'
+import { client } from './services/graphQL/client'
+import Home from './screens/Home'
+import NotFound from './screens/NotFound'
+import Header from './components/Header'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ApolloProvider client={client}>
+        <Router>
+          <Header/>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Router>
+      </ApolloProvider>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
