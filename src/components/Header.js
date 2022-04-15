@@ -12,16 +12,16 @@ const Header = () => {
             <Link data-test='home' to="/">Home</Link>
           </Button>,
           <Button key="5">
-            <Link to="/register">Register</Link>
+            <Link data-test='register' to="/register">Register</Link>
           </Button>,
           <Button key="4" danger>
-            <Link to="/login">Login</Link>
+            <Link data-test='login' to="/login">Login</Link>
           </Button>,
           <Button key="3">
             <Link data-test='articles' to="/articles">Articles</Link>
           </Button>,
           <Button key="2">
-            <Link to="/user">Single user</Link>
+            <Link data-test='user' to="/user">Single user</Link>
           </Button>,
           <Button key="1" type="primary">
             <Link data-test='users' to="/users">Users</Link>

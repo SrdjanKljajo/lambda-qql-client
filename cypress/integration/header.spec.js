@@ -1,29 +1,39 @@
 /* eslint-disable no-undef */
 /// <reference types="cypress" />
 
-import { CLIENT_LOCAL } from "../../constants/urls"
-
 describe('The Header', () => {
 
     before(() => {
-      cy.visit(CLIENT_LOCAL)
+      cy.visit('/')
     })
   
-    it('Home button', () => {
+    it('should have home button', () => {
       cy.get('[data-test=home]').click()
-      cy.contains('Home')
-      cy.url().should('include', CLIENT_LOCAL)
+      cy.url().should('include', '/')
     }) 
 
-    it('Users button', () => {
+    it('should have register button', () => {
+      cy.get('[data-test=register]').click()
+      cy.url().should('include', '/register')
+    }) 
+
+    it('should have login button', () => {
+      cy.get('[data-test=login]').click()
+      cy.url().should('include', '/login')
+    }) 
+
+    it('should have users button', () => {
       cy.get('[data-test=users]').click()
-      cy.contains('Users')
-      cy.url().should('include', CLIENT_LOCAL + '/users')
+      cy.url().should('include', '/users')
     }) 
 
-    it('Articles button', () => {
+    it('should have user button', () => {
+      cy.get('[data-test=user]').click()
+      cy.url().should('include', '/user')
+    }) 
+
+    it('should have articles button', () => {
       cy.get('[data-test=articles]').click()
-      cy.contains('Articles')
-      cy.url().should('include', CLIENT_LOCAL + '/articles')
+      cy.url().should('include', '/articles')
     }) 
   })

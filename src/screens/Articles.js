@@ -11,9 +11,9 @@ const Articles = () => {
   if (error) return `Error! ${error.message}`
 
   return (
-    <>
+    <div className='container'>
       <h1>Articles</h1>
-      <Row>
+      <Row className='justify-content-around'>
         {data.allArticles.loading && <p>Loading...</p>}
         {data.allArticles.length === 0 && !loading && (
           <p>No articles available!</p>
@@ -21,7 +21,7 @@ const Articles = () => {
         {error && !loading && <p>{error}</p>}
         {data.allArticles.length > 0 &&
           data.allArticles.map((article) => (
-            <Col lg={12} xl={8} key={article.id}>
+            <Col lg={8} xl={6} key={article.id}>
               <Card title={article.title} style={{ width: 300 }}>
                 <h2>Author - {article.user.username}</h2>
                 <p>{article.body}</p>
@@ -40,7 +40,7 @@ const Articles = () => {
             </Col>
           ))}
       </Row>
-    </>
+    </div>
   )
 }
 

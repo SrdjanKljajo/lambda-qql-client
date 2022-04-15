@@ -15,7 +15,7 @@ const Login = () => {
       email,
       password
     },
-    onCompleted: () => {
+    onCompleted: ({login}) => {
       navigate('/articles')
     }
   })

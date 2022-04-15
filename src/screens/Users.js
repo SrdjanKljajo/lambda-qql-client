@@ -11,16 +11,17 @@ const UsersGQL = () => {
   if (error) return `Error! ${error.message}`
 
   return (
-    <>
+    <div className='container'>
       <h1>Users</h1>
-      <Row>
+      <Row className='justify-content-around'>
           {data.allUsers.map((user) => (
-            <Col lg={8} xl={6} key={user.id}>
-              <Card style={{ width: 300, background: 'silver' }}>
+            <Col className='mx-auto' lg={8} xl={6} key={user.id}>
+              <Card data-test='user-card' style={{ width: 300, background: 'silver'}}>
                 <h2>{user.username}</h2>
                 <p>{user.email}</p>
                 <hr />
                   <Button
+                    data-test={user.username}
                     type="danger"
                     onClick={() => {
                       deleteUser({
@@ -38,7 +39,7 @@ const UsersGQL = () => {
           ))}
       </Row>
       <Divider />
-    </>
+    </div>
   )
 }
 

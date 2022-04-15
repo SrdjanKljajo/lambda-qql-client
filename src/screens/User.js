@@ -13,12 +13,12 @@ const SingleUser = () => {
   if (error) return `Error! ${error.message}`
 
   return (
-    <>
+    <div className='container'>
       <h1>Single user articles</h1>
       {data.username}
-      <Row>
+      <Row className='justify-content-around'>
         {data.user.articles.map((article) => (
-          <Col lg={12} xl={8} key={article.id}>
+          <Col lg={8} xl={6} key={article.id}>
             <Card style={{ width: 300, background: 'silver' }}>
               <h2>{article.title}</h2>
               <hr />
@@ -41,7 +41,7 @@ const SingleUser = () => {
       {data.user.articles.length === 0 && (
         <h1>The user {data.username} has no articles</h1>
       )}
-    </>
+    </div>
   )
 }
 

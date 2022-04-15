@@ -37,6 +37,7 @@ const Register = () => {
         ]}
       >
         <Input
+          data-test='username'
           prefix={<UserOutlined className="site-form-item-icon" />}
           type="text"
           placeholder="username"
@@ -55,6 +56,7 @@ const Register = () => {
         ]}
       >
         <Input
+          data-test='email'
           prefix={<MailOutlined className="site-form-item-icon" />}
           type="email"
           placeholder="Email"
@@ -73,6 +75,7 @@ const Register = () => {
         ]}
       >
         <Input
+          data-test='password'
           prefix={<LockOutlined className="site-form-item-icon" />}
           type="password"
           placeholder="Password"
@@ -93,6 +96,7 @@ const Register = () => {
 
       <Form.Item>
         <Button
+          data-test='form-button'
           type="primary"
           htmlType="submit"
           className="login-form-button"
