@@ -7,9 +7,13 @@ describe('The Header', () => {
       cy.visit('/')
     })
   
+    it('should contain header title', () => {
+      cy.title().should('contain', 'React QQL')
+    }) 
+
     it('should have home button', () => {
       cy.get('[data-test=home]').click()
-      cy.url().should('include', '/')
+      cy.location('pathname').should('include', '/')
     }) 
 
     it('should have register button', () => {

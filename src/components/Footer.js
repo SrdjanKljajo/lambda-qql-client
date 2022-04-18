@@ -1,0 +1,20 @@
+import { UpSquareOutlined } from '@ant-design/icons'
+import { Divider, Row } from 'antd'
+
+const Footer = () => {
+  const top = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+  return (
+    <>
+      <Divider orientation="center">Footer</Divider>
+      <h2 className="text-center">@srki</h2>
+      <Row justify="end">
+        <UpSquareOutlined
+          onClick={top}
+          style={{ fontSize: '30px', color: '#08c', margin: '10px' }}
+        />
+      </Row>
+    </>
+  )
+}
+
+export default Footer

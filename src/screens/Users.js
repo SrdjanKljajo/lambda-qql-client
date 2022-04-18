@@ -16,7 +16,7 @@ const UsersGQL = () => {
       <Row className='justify-content-around'>
           {data.allUsers.map((user) => (
             <Col className='mx-auto' lg={8} xl={6} key={user.id}>
-              <Card data-test='user-card' style={{ width: 300, background: 'silver'}}>
+              <Card data-test='user-card' className='m-2' style={{ maxHeight: 400, background: 'silver'}}>
                 <h2>{user.username}</h2>
                 <p>{user.email}</p>
                 <hr />

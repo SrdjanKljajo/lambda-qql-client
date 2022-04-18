@@ -19,8 +19,8 @@ const SingleUser = () => {
       <Row className='justify-content-around'>
         {data.user.articles.map((article) => (
           <Col lg={8} xl={6} key={article.id}>
-            <Card style={{ width: 300, background: 'silver' }}>
-              <h2>{article.title}</h2>
+            <Card className='m-2' style={{ maxWidth: 300, maxHeight: 400, background: 'azure' }}>
+              <h6>{article.title}</h6>
               <hr />
               <p>{article.body}</p>
               <Button

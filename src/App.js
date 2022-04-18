@@ -11,6 +11,8 @@ import User from './screens/User'
 import Articles from './screens/Articles'
 import Login from './screens/Login'
 import Register from './screens/Register'
+import AddArticle from './screens/AddArticle'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -24,9 +26,11 @@ const App = () => {
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/users" element={<Users />} />
             <Route exact path="/user" element={<User />} />
+            <Route exact path="/create-article" element={<AddArticle />} />
             <Route exact path="/articles" element={<Articles />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <Footer />
         </Router>
       </ApolloProvider>
     </div>

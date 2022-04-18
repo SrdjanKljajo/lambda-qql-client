@@ -17,6 +17,9 @@ const Header = () => {
           <Button key="4" danger>
             <Link data-test='login' to="/login">Login</Link>
           </Button>,
+          <Button key="7">
+            <Link data-test='addArticle' to="/create-article">Create Article</Link>
+          </Button>,
           <Button key="3">
             <Link data-test='articles' to="/articles">Articles</Link>
           </Button>,

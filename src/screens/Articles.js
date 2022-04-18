@@ -22,7 +22,7 @@ const Articles = () => {
         {data.allArticles.length > 0 &&
           data.allArticles.map((article) => (
             <Col lg={8} xl={6} key={article.id}>
-              <Card title={article.title} style={{ width: 300 }}>
+              <Card data-test='article-card' className='m-1' title={article.title} style={{ height: 400}}>
                 <h2>Author - {article.user.username}</h2>
                 <p>{article.body}</p>
                 <Button

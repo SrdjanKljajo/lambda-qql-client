@@ -15,23 +15,24 @@ const Login = () => {
       email,
       password
     },
-    onCompleted: ({login}) => {
+    onCompleted: () => {
       navigate('/articles')
-    }
+    } 
   })
 
   return (
-    <Form name="normal_login" className="login-form">
+    <Form data-test='form-button' name="normal_login" className="login-form">
       <Form.Item
         name="email"
         rules={[
           {
             required: true,
-            message: 'Please input your Password!'
+            message: 'Please input your Email!'
           }
         ]}
       >
         <Input
+          data-test='email'
           prefix={<MailOutlined className="site-form-item-icon" />}
           type="email"
           placeholder="Email"
@@ -45,11 +46,12 @@ const Login = () => {
         rules={[
           {
             required: true,
-            message: 'Please input your Password!'
+            message: 'Please input your password!'
           }
         ]}
       >
         <Input
+          data-test='password'
           prefix={<LockOutlined className="site-form-item-icon" />}
           type="password"
           placeholder="Password"

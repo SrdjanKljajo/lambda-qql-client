@@ -11,13 +11,14 @@ describe('The Register Page', () => {
 
   before(() => {
     cy.visit('/register')
+    cy.get('[data-test=form-button').as('submit')
   })
 
   it('should register user', () => {
     cy.get('[data-test=username]').type(username)
     cy.get('[data-test=email]').type(email)
     cy.get('[data-test=password]').type(password)
-    cy.get('[data-test=form-button').click()
+    cy.get('@submit').click()
   })  
 
   it('should register success', () => {

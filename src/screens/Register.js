@@ -17,12 +17,13 @@ const Register = () => {
       email,
       password
     },
+    
     onCompleted: ({ registerUser }) => {
       setMessage(registerUser.message)
       setTimeout(() => {
         window.location = '/articles'
       }, 2000)
-    }
+    } 
   })
 
   return (
@@ -51,7 +52,7 @@ const Register = () => {
         rules={[
           {
             required: true,
-            message: 'Please input your Password!'
+            message: 'Please input your email!'
           }
         ]}
       >
@@ -70,7 +71,7 @@ const Register = () => {
         rules={[
           {
             required: true,
-            message: 'Please input your Password!'
+            message: 'Please input your password!'
           }
         ]}
       >
@@ -96,6 +97,7 @@ const Register = () => {
 
       <Form.Item>
         <Button
+          disabled={!email || !username || !password}
           data-test='form-button'
           type="primary"
           htmlType="submit"
