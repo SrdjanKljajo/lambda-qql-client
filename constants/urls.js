@@ -1,1 +1,0 @@
-export const CLIENT_LOCAL = 'http://localhost:3001'
