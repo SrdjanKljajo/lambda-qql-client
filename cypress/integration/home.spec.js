@@ -7,6 +7,6 @@ describe('The Home Page', () => {
   }) 
   it('should have home title', () => {
     cy.url().should('include', '/')
-    cy.contains('Basic Home Page')
+    cy.contains('Basic Home')
   }) 
 })
