@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
       <Divider orientation="center">Footer</Divider>
-      <h2 className="text-center">@srki</h2>
+      <span>&copy; 2022 Srdjan Kljajo</span>
       <Row justify="end">
         <UpSquareOutlined
           onClick={top}
