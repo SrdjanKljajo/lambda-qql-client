@@ -28,7 +28,6 @@ describe('The Register Page', () => {
 
   it('should delete user', () => {
     cy.get('[data-test=user-card]').as('allUsers')
-    cy.get('@allUsers').last().should('contain', username)
     cy.get('@allUsers').last().find('Button').click() 
   })    
 })

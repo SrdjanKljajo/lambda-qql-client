@@ -9,7 +9,6 @@ describe('The Home Page', () => {
 
   it('should have users', () => {
     cy.url().should('include', '/users')
-    cy.get('@allUsers').should('not.contain.text', 'Articles')
     cy.get('@allUsers').last().should('contain', 'Delete')
   }) 
 })
